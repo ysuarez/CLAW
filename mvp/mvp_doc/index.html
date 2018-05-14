@@ -1,0 +1,1770 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for Islandora CLAW">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>Minimum Viable Product - Islandora CLAW</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#islandora-claw-mvp" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../user-documentation/intro-to-claw/" title="Islandora CLAW" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Islandora CLAW
+              </span>
+              <span class="md-header-nav__topic">
+                Minimum Viable Product
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/Islandora-CLAW/CLAW/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Islandora CLAW
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Islandora-CLAW/CLAW/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      User Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        User Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/intro-to-claw/" title="Introduction to Islandora CLAW" class="md-nav__link">
+      Introduction to Islandora CLAW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/CLAWfor1x/" title="Islandora CLAW for 1.x Users" class="md-nav__link">
+      Islandora CLAW for 1.x Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/intro-to-ld-for-claw/" title="Introduction to Linked Data for CLAW" class="md-nav__link">
+      Introduction to Linked Data for CLAW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/getting-started-with-islandora-claw/" title="Getting Started with Islandora CLAW" class="md-nav__link">
+      Getting Started with Islandora CLAW
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Technical Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Technical Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Minimum Viable Product
+      </label>
+    
+    <a href="./" title="Minimum Viable Product" class="md-nav__link md-nav__link--active">
+      Minimum Viable Product
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" title="Motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-features" title="High Level Features" class="md-nav__link">
+    High Level Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrative-interface" title="Administrative Interface" class="md-nav__link">
+    Administrative Interface
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drupal-8" title="Drupal 8" class="md-nav__link">
+    Drupal 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-db" title="SQL DB" class="md-nav__link">
+    SQL DB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-engine" title="Search Engine" class="md-nav__link">
+    Search Engine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservices" title="Microservices" class="md-nav__link">
+    Microservices
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id-mapping-service" title="ID Mapping Service" class="md-nav__link">
+    ID Mapping Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-conversion-service" title="Image Conversion Service" class="md-nav__link">
+    Image Conversion Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-extraction-service" title="Text Extraction Service" class="md-nav__link">
+    Text Extraction Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fits-web-service" title="FITS Web Service" class="md-nav__link">
+    FITS Web Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository" title="Repository" class="md-nav__link">
+    Repository
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fedora" title="Fedora" class="md-nav__link">
+    Fedora
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-x" title="API-X" class="md-nav__link">
+    API-X
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triplestore" title="Triplestore" class="md-nav__link">
+    Triplestore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectors" title="Connectors" class="md-nav__link">
+    Connectors
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id-indexer" title="ID Indexer" class="md-nav__link">
+    ID Indexer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triplestore-indexer" title="Triplestore Indexer" class="md-nav__link">
+    Triplestore Indexer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync" title="Sync" class="md-nav__link">
+    Sync
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alpaca" title="Alpaca" class="md-nav__link">
+    Alpaca
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-flows" title="Request Flows" class="md-nav__link">
+    Request Flows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-a-resource" title="Read a Resource" class="md-nav__link">
+    Read a Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-resource" title="Create a Resource" class="md-nav__link">
+    Create a Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-a-resource" title="Update a Resource" class="md-nav__link">
+    Update a Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-a-resource" title="Delete a Resource" class="md-nav__link">
+    Delete a Resource
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-modeling-in-fedora" title="Content Modeling in Fedora" class="md-nav__link">
+    Content Modeling in Fedora
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collection" title="Collection" class="md-nav__link">
+    Collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image" title="Image" class="md-nav__link">
+    Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-preservation-master-file" title="Image Preservation Master File" class="md-nav__link">
+    Image Preservation Master File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-service-file" title="Image Service File" class="md-nav__link">
+    Image Service File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-thumbnail-file" title="Image Thumbnail File" class="md-nav__link">
+    Image Thumbnail File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#book" title="Book" class="md-nav__link">
+    Book
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" title="Page" class="md-nav__link">
+    Page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-proxy" title="Page Proxy" class="md-nav__link">
+    Page Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-preservation-master-file" title="Page Preservation Master File" class="md-nav__link">
+    Page Preservation Master File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-intermediate-file" title="Page Intermediate File" class="md-nav__link">
+    Page Intermediate File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-service-file" title="Page Service File" class="md-nav__link">
+    Page Service File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-thumbnail-file" title="Page Thumbnail File" class="md-nav__link">
+    Page Thumbnail File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drupal-8_1" title="Drupal 8" class="md-nav__link">
+    Drupal 8
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../technical-documentation/docs-build/" title="How to build documenation" class="md-nav__link">
+      How to build documenation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../technical-documentation/drupal-project/" title="Syncing Drupal Project" class="md-nav__link">
+      Syncing Drupal Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../technical-documentation/versioning/" title="Versioning Policy" class="md-nav__link">
+      Versioning Policy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../alpaca/alpaca-technical-stack/" title="Alpaca Technical Stack" class="md-nav__link">
+      Alpaca Technical Stack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora/rdf-mapping/" title="RDF Mapping" class="md-nav__link">
+      RDF Mapping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora/drupal-bundle-configurations/" title="Dupal Bundle Configurations" class="md-nav__link">
+      Dupal Bundle Configurations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Components
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Islandora CLAW" class="md-nav__link">
+      Islandora CLAW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../alpaca/README/" title="Alpaca" class="md-nav__link">
+      Alpaca
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chullo/README/" title="Chullo" class="md-nav__link">
+      Chullo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../crayfish/README/" title="Crayfish" class="md-nav__link">
+      Crayfish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../crayfish-commons/README/" title="Crayfish-Commons" class="md-nav__link">
+      Crayfish-Commons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../syn/README/" title="Syn" class="md-nav__link">
+      Syn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Drupal modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        Drupal modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora/README/" title="Islandora" class="md-nav__link">
+      Islandora
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora_collection/README/" title="Islandora Collection" class="md-nav__link">
+      Islandora Collection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora_image/README/" title="Islandora Image" class="md-nav__link">
+      Islandora Image
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../jsonld/README/" title="jsonld" class="md-nav__link">
+      jsonld
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/README/" title="Installation (Vagrant)" class="md-nav__link">
+      Installation (Vagrant)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/CONTRIBUTING/" title="How to contribute" class="md-nav__link">
+      How to contribute
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/committers/" title="Committers" class="md-nav__link">
+      Committers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/hacking-on-islandora/" title="Hacking on Islandora" class="md-nav__link">
+      Hacking on Islandora
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Migration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Migration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../migration/migration/" title="Migration" class="md-nav__link">
+      Migration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../migration/fedora-namespace-predicates/" title="Fedora namespace predicates" class="md-nav__link">
+      Fedora namespace predicates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../migration/islandora-namespace-predicates/" title="Islandora namespace predicates" class="md-nav__link">
+      Islandora namespace predicates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" title="Motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-features" title="High Level Features" class="md-nav__link">
+    High Level Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrative-interface" title="Administrative Interface" class="md-nav__link">
+    Administrative Interface
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drupal-8" title="Drupal 8" class="md-nav__link">
+    Drupal 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-db" title="SQL DB" class="md-nav__link">
+    SQL DB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-engine" title="Search Engine" class="md-nav__link">
+    Search Engine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservices" title="Microservices" class="md-nav__link">
+    Microservices
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id-mapping-service" title="ID Mapping Service" class="md-nav__link">
+    ID Mapping Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-conversion-service" title="Image Conversion Service" class="md-nav__link">
+    Image Conversion Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-extraction-service" title="Text Extraction Service" class="md-nav__link">
+    Text Extraction Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fits-web-service" title="FITS Web Service" class="md-nav__link">
+    FITS Web Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository" title="Repository" class="md-nav__link">
+    Repository
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fedora" title="Fedora" class="md-nav__link">
+    Fedora
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-x" title="API-X" class="md-nav__link">
+    API-X
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triplestore" title="Triplestore" class="md-nav__link">
+    Triplestore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectors" title="Connectors" class="md-nav__link">
+    Connectors
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id-indexer" title="ID Indexer" class="md-nav__link">
+    ID Indexer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triplestore-indexer" title="Triplestore Indexer" class="md-nav__link">
+    Triplestore Indexer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync" title="Sync" class="md-nav__link">
+    Sync
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alpaca" title="Alpaca" class="md-nav__link">
+    Alpaca
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-flows" title="Request Flows" class="md-nav__link">
+    Request Flows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-a-resource" title="Read a Resource" class="md-nav__link">
+    Read a Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-resource" title="Create a Resource" class="md-nav__link">
+    Create a Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-a-resource" title="Update a Resource" class="md-nav__link">
+    Update a Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-a-resource" title="Delete a Resource" class="md-nav__link">
+    Delete a Resource
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-modeling-in-fedora" title="Content Modeling in Fedora" class="md-nav__link">
+    Content Modeling in Fedora
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collection" title="Collection" class="md-nav__link">
+    Collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image" title="Image" class="md-nav__link">
+    Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-preservation-master-file" title="Image Preservation Master File" class="md-nav__link">
+    Image Preservation Master File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-service-file" title="Image Service File" class="md-nav__link">
+    Image Service File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-thumbnail-file" title="Image Thumbnail File" class="md-nav__link">
+    Image Thumbnail File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#book" title="Book" class="md-nav__link">
+    Book
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" title="Page" class="md-nav__link">
+    Page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-proxy" title="Page Proxy" class="md-nav__link">
+    Page Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-preservation-master-file" title="Page Preservation Master File" class="md-nav__link">
+    Page Preservation Master File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-intermediate-file" title="Page Intermediate File" class="md-nav__link">
+    Page Intermediate File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-service-file" title="Page Service File" class="md-nav__link">
+    Page Service File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-thumbnail-file" title="Page Thumbnail File" class="md-nav__link">
+    Page Thumbnail File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drupal-8_1" title="Drupal 8" class="md-nav__link">
+    Drupal 8
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Islandora-CLAW/CLAW/edit/master/docs/mvp/mvp_doc.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="islandora-claw-mvp">Islandora CLAW MVP</h1>
+<h2 id="motivation">Motivation</h2>
+<p>The Islandora CLAW project is currently transitioning from a prototype into a competitive product, and has had a requirements change from integration with Drupal 7 to Drupal 8. In order to aid in that transition, we are defining the minimum viable product. This will defend against scope creep, give clearly defined goals for community members to work towards, and present the point at which the CLAW team feels the software is ready to be tested out in small installations.</p>
+<p>Needless to say, since this is a minimum product, a lot of parts of the previous prototype are either going to get replaced by an existing project to ease the maintenance load, or be removed altogether until time and resources allow other development.</p>
+<h2 id="high-level-features">High Level Features</h2>
+<p>These are what are considered the minimum requirements for a functional Islandora CLAW that is worthy of a 1.0.0 release.</p>
+<ul>
+<li>Content modeled in Drupal as Entities using <a href="https://github.com/duraspace/pcdm/wiki">PCDM</a> 1.0</li>
+<li><a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a> API exposed for Drupal Entities</li>
+<li>Support for collections, images, books, and pages</li>
+<li>The ability to control metadata mappings between Drupal and <a href="https://www.w3.org/RDF/">RDF</a></li>
+<li>Provide RDF based default descriptive metadata profile in Drupal</li>
+<li>The ability to export/import <a href="http://json-ld.org/">JSON-LD</a></li>
+<li>Automatic backup of Drupal content in Fedora 4</li>
+<li>Ability to restore/bootstrap a Drupal site from a properly structured Fedora 4 repository</li>
+<li>The ability to index and search resources with Apache Solr</li>
+<li>The ability to restrict access to collections and/or individual resources across all representations (Drupal, Fedora, Solr, etc…)</li>
+<li>Asynchronous derivative generation</li>
+<li><a href="https://www.vagrantup.com/">Vagrant</a> environment for development purposes, which will serve as a starting point for more complicated, distributed installs</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<h3 id="overview">Overview</h3>
+<p>Islandora is composed of four broad categories of technologies. On one end, there is the administrative interface, which users and other clients will interact with. On the other is a repository, which will hold binary data and RDF triples. In between the two are connectors, which are small pieces of software that react to events from either administrative interface or the repository. These connectors will utilize microservices -- small utilities exposed as web services either internally or out on the internet at large.</p>
+<p><img alt="High Level Diagram of Islandora CLAW" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/masterhttps://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image11.png" /></p>
+<h3 id="administrative-interface">Administrative Interface</h3>
+<h4 id="drupal-8">Drupal 8</h4>
+<p><a href="https://www.drupal.org/8">Drupal 8</a> provides a content management system (CMS for short) that allows end users the ability to create, edit, publish, and present digital content. Clients will interact with Drupal 8 via a browser or through a http client (such as <a href="https://curl.haxx.se/">cURL</a>) in order to manipulate digital content. With each write operation, messages will be emitted to an event stream for processing by connectors.</p>
+<h4 id="sql-db">SQL DB</h4>
+<p>Drupal 8 requires a <a href="http://www.mysql.com/">MySQL</a> (or drop-in replacement) or <a href="https://www.postgresql.org/">Postgres</a> database.</p>
+<h4 id="search-engine">Search Engine</h4>
+<p>Existing Drupal 8 modules for <a href="https://lucene.apache.org/solr/">Apache Solr</a> or <a href="https://www.elastic.co/">Elastic Search</a> will be utilized to provide full text search.</p>
+<h3 id="microservices">Microservices</h3>
+<p>A microservice is a small web service with functionality related to a single problem, even if it exposes just a single function. It can be deployed and configured independently of any other service, even having its own database if necessary. It can even be something that we don’t directly maintain or control ourselves.</p>
+<h4 id="id-mapping-service">ID Mapping Service</h4>
+<p>Identifiers between Fedora and Drupal need to be aligned so we can trace our way from one end of the system to the other.  Implementing it as a microservice decouples this functionality from the rest of the codebase, allowing it to change or be pluggable with different mapping functions. It will utilize its own database. The ID indexing connector will be its primary client, updating the registry of IDs in response to repository events.</p>
+<h4 id="image-conversion-service">Image Conversion Service</h4>
+<p>Image conversion is a common operation in a content repository. Thumbnails, lower resolution copies for everyday access, and JP2s for use with IIIF image servers need to be generated when preservation masters are added or updated. This can be easily implemented by exposing ImageMagick’s convert command as a microservice.</p>
+<h4 id="text-extraction-service">Text Extraction Service</h4>
+<p>Text extraction on PDFs or images of written text can be utilized to provide searching capabilities on content of a book or document.   Ghostscript can be used on text based PDF’s. Images will require an OCR utility like <a href="https://github.com/tesseract-ocr/tesseract/wiki">Tesseract</a>.</p>
+<h4 id="fits-web-service">FITS Web Service</h4>
+<p>The <a href="http://projects.iq.harvard.edu/fits/downloads#fits-servlet">FITS web service</a> is an already existing project that extracts technical metadata and produces FITS xml files.</p>
+<h3 id="repository">Repository</h3>
+<h4 id="fedora">Fedora</h4>
+<p><a href="https://wiki.duraspace.org/display/FF/Fedora+Repository+Home">Fedora 4</a> houses binary content along with RDF triples for metadata about repository content. It also conforms to the <a href="https://www.w3.org/TR/ldp-primer/">LDP</a> specification, allowing for manipulation of relationships through HTTP operations.</p>
+<h4 id="api-x">API-X</h4>
+<p><a href="https://wiki.duraspace.org/display/FF/Design+-+API+Extension+Architecture">API-X</a> allows Islandora to extend the Fedora 4 API.  Microservices are registered in API-X and then ‘bound’ to repository content. A proxy sitting in front of Fedora exposes microservices as functions on repository content, which all HTTP requests must be routed through.  </p>
+<p>For example, suppose Islandora is running the FITS web service described above.  Then let’s say we ‘bind’ it to all binaries in Fedora, with an identifier of ‘fits’. If we have a binary file at <a href="http://example.org/fcrepo/rest/binaries/example">http://fedora-host.com/fcrepo/rest/binaries/example</a>, then instead of writing code to retreive the content and forward it to our FITS service, we simply visit the proxy at <a href="http://apix-host.com/fcrepo/rest/binaries/example/fits">http://apix-host.com/fcrepo/rest/binaries/example/fits</a>. </p>
+<p>Since services can be described, and that information is made available to interested clients, other applications can make informed decisions about what services are available for particular resources.</p>
+<h4 id="triplestore">Triplestore</h4>
+<p>RDF content is indexed in a <a href="https://www.w3.org/TR/rdf-sparql-query/">SPARQL</a> 1.1 compliant triplestore.</p>
+<h3 id="connectors">Connectors</h3>
+<p>Connectors are small programs that listen to the event streams of either the Fedora repository or Drupal. In response to events, they perform actions, often bridging two pieces of technology together (like indexing a triplestore, hence ‘connectors’). <a href="http://camel.apache.org/">Apache Camel</a> is a natural fit for these types of programs.</p>
+<p>Connectors will often delegate larger chunks of work to microservices, either bound to content through API-X or used stand-alone. They are primarily concerned with guaranteeing that events are responded to in a <a href="https://www.youtube.com/watch?v=6dVNdFwqeKs">idempotent</a> fashion.  Due to the nature of asynchronous messaging, certain guarantees, such as timeliness of delivery, cannot be made.  So connectors may need to retry a couple of times, or know to ignore a message that’s delivered late or applied twice.  This is why it’s important that operations are idempotent.</p>
+<h4 id="id-indexer">ID Indexer</h4>
+<p>A connector will listen to Fedora events and index unique IDs contained in RDF using the ID Mapping microservice. The predicate used to notate unique IDs can be controlled through configuration. </p>
+<h4 id="triplestore-indexer">Triplestore Indexer</h4>
+<p>A connector will listen to Fedora events and index RDF in a SPARQL 1.1 triplestore. This is provided by the Fedora community as part of the <a href="https://github.com/fcrepo4-exts/fcrepo-camel-toolbox/tree/master/fcrepo-indexing-triplestore">fcrepo-camel-toolbox</a> project.</p>
+<h4 id="sync">Sync</h4>
+<p>A sub-project of <a href="https://github.com/Islandora-CLAW/Alpaca">Alpaca</a> that provides two connectors for keeping information between Fedora and Drupal in sync. One, which indexes content in Fedora from Drupal events, is always running. The other, which indexes content in Drupal based on state in Fedora, is manually triggered through a re-indexing process like other fcrepo-camel-toolbox connectors.</p>
+<h4 id="alpaca">Alpaca</h4>
+<p><a href="https://github.com/Islandora-CLAW/Alpaca">Alpaca</a> responds to creation and update events for binary files and creates derivative files based on the microservices it finds available for that type of binary in API-X. Derivatives are then ingested into Drupal, with Sync making sure they get flushed back to Fedora.</p>
+<h2 id="request-flows">Request Flows</h2>
+<p>Here are the proposed flows for all the different types of requests you can make against repository objects.</p>
+<h3 id="read-a-resource">Read a Resource</h3>
+<p>Suppose a client views a resource in Islandora through their browser. A request is made to Drupal, which looks up the resource in an SQL database, and its representation is returned to the user.</p>
+<p><img alt="Read a Resource" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/masterhttps://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image00.png" /></p>
+<h3 id="create-a-resource">Create a Resource</h3>
+<p>Suppose a client submits a form to create a new Resource, or provides a json-ld or binary representation to an entity REST endpoint. The supplied representation is used to create an entity in Drupal. In response to the entity being saved, an event is emitted with supplied representation as the body. The response is then sent back to the client. If using a browser, the client should be redirected to the newly created resource.  </p>
+<p><img alt="Create a Resource" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image03.png" /></p>
+<p>Meanwhile, Sync will receive the creation event, and ingest the supplied representation in Fedora. Fedora will then emit a creation event.  </p>
+<p><img alt="Emit a creation event" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image02.png" /></p>
+<p>The ID Mapping connector will react, retrieving the Fedora representation and extracting an ID out of the RDF. That ID will be indexed in the ID Mapping microservice.</p>
+<p><img alt="ID indexed in the ID Mapping microservice" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image07.png" /></p>
+<p>The triple store connector will also react, retrieving RDF and indexing it in the triple store.</p>
+<p><img alt="Retrieving RDF and indexing it in the triple store" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image01.png" /></p>
+<p>If the node created was a preservation master, then Alpaca will respond by inspecting the list of derivative generation services bound as extensions on the preservation master in API-X. Each will be invoked, with the new resource getting ingested into Drupal.  </p>
+<p><img alt="New resource ingested into Drupal" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image10.png" /></p>
+<p>The process repeats itself again, with new events being emitted for the new entities getting created in Drupal. Sync responds and ingests the derivatives into Fedora.</p>
+<p><img alt="Sync responds and ingests derivatives into Fedora" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image02.png" /></p>
+<p>Fedora emits the creation events, but since none are a preservation master, Alpaca does not respond and the cycle is broken.</p>
+<p><img alt="Alpaca does not respond and the cycle is broken" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image08.png" /></p>
+<h3 id="update-a-resource">Update a Resource</h3>
+<p>Suppose a client submits a form to update a new Resource, or provides a json-ld or binary representation to an entity REST endpoint.  In response to the entity being saved, an event is emitted with supplied representation as the body. The response is then sent back to the client.</p>
+<p><img alt="Update a Resource" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image03.png" /></p>
+<p>Meanwhile, Sync will receive the update event, and apply it against the representation in Fedora. Fedora will then emit an update event.  </p>
+<p><img alt="Fedora will emit an update event" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image04.png" /></p>
+<p>The triple store connector will also react, retrieving RDF and indexing it in the triple store.</p>
+<p><img alt="Triple store connector reacts" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image01.png" /></p>
+<p>If a binary of a presentation master was updated, then Alpaca will respond by inspecting the list of derivative generation services bound as extensions on the preservation master in API-X. Each will be invoked, with the new resource overwriting its predecessor in Drupal.</p>
+<p><img alt="New resource overwriting its processor in Drupal" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image09.png" /></p>
+<p>The process repeats itself again, with new events being emitted for the derivative entities getting updated in Drupal. Sync responds and ingests the derivatives into Fedora.</p>
+<p><img alt="Sync responds and ingests derivatives into Fedora" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image01.png" /></p>
+<p>Fedora emits the creation events, but since none are a preservation master, Alpaca does not respond and the cycle is broken.</p>
+<p><img alt="Alpaca does not respond and the cycle is broken" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image03.png" /></p>
+<h3 id="delete-a-resource">Delete a Resource</h3>
+<p>Suppose a client deletes a resource through the browser or API. In response to the entity being deleted, an event is emitted. The response is then sent back to the client.</p>
+<p><img alt="Delete a Resource" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image08.png" /></p>
+<p>Meanwhile, Sync will receive the delete event, and remove the corresponding resource in Fedora.</p>
+<p><img alt="Sync receives the event and deletes the corresponding resource in Fedora" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image04.png" /></p>
+<p>The ID Mapping connector will respond to the delete event by removing the resource’s entry.</p>
+<p><img alt="ID Mapping connector responds to the delete event by removing the resource’s entry" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image05.png" /></p>
+<p>The triple store connector will also respond, deleting all triples with subject of the resource.</p>
+<p><img alt="The triple store connector responds, deleting all triples with subject of the resource" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image13.png" /></p>
+<h2 id="content-modeling-in-fedora">Content Modeling in Fedora</h2>
+<p>Descriptive metadata will be RDF properties, and a default dcterms descriptive metadata application profile will be created.</p>
+<p>Technical metadata will be RDF properties, and follow the Hydra/Islandora led <a href="https://wiki.duraspace.org/display/hydra/Technical+Metadata+Application+Profile">technical metadata application profile</a>.</p>
+<p>Here are Turtle snippets representing the default collection, object, and file types.</p>
+<h4 id="collection">Collection</h4>
+<pre><code>&lt;&gt;  a pcdm:Collection   .
+dc:title “Collection Title” .
+    dc:description “Collection description” .
+    … other descriptive metadata …
+</code></pre>
+
+<h4 id="image">Image</h4>
+<pre><code>&lt;&gt;  a pcdm:Object, schema:ImageObject .
+    pcdm:memberOf &lt;someCollection&gt;
+    dc:title “Image Title” .
+    dc:description “Image description” .
+    … other descriptive metadata …
+</code></pre>
+
+<h4 id="image-preservation-master-file">Image Preservation Master File</h4>
+<pre><code>&lt;&gt;  a pcdmuse:PreservationMasterFile .
+    pcdm:fileOf &lt;someImage&gt;
+    ebucore:hasMimeType “image/jpeg”
+    … other technical metadata …
+</code></pre>
+
+<h4 id="image-service-file">Image Service File</h4>
+<pre><code>&lt;&gt;  a pcdmuse:ServiceFile .
+    pcdm:fileOf &lt;someImage&gt;
+    ebucore:hasMimeType “image/jpeg”
+    … other technical metadata …
+</code></pre>
+
+<h4 id="image-thumbnail-file">Image Thumbnail File</h4>
+<pre><code>&lt;&gt;  a pcdmuse:ThumbnailImage .
+    pcdm:fileOf &lt;someImage&gt;
+    ebucore:hasMimeType “image/png”
+    … other technical metadata …
+</code></pre>
+
+<h4 id="book">Book</h4>
+<pre><code>&lt;&gt;  a pcdm:Object, schema:Book .
+    pcdm:memberOf &lt;someCollection&gt;
+iana:first &lt;firstPageProxy&gt;
+iana:last &lt;lastPageProxy&gt;
+    dc:title “Book Title” .
+    dc:description “Book description” .
+    … other descriptive metadata …
+</code></pre>
+
+<h4 id="page">Page</h4>
+<pre><code>&lt;&gt;  a pcdm:Object, schema:ImageObject .
+    pcdm:memberOf &lt;someBook&gt;
+    dc:title “Page Title” .
+    dc:description “Page description” .
+    … other descriptive metadata …
+</code></pre>
+
+<h4 id="page-proxy">Page Proxy</h4>
+<pre><code>&lt;&gt;  a ore:Proxy
+    ore:proxyFor &lt;somePage&gt;
+    ore:proxyIn &lt;someBook&gt;
+    iana:prev &lt;prevPageProxy&gt;
+    iana:next &lt;nextPageProxy&gt;
+</code></pre>
+
+<h4 id="page-preservation-master-file">Page Preservation Master File</h4>
+<pre><code>&lt;&gt;  a pcdmuse:PreservationMasterFile .
+    pcdm:fileOf &lt;somePage&gt;
+    ebucore:hasMimeType “image/tiff”
+    … other technical metadata …
+</code></pre>
+
+<h4 id="page-intermediate-file">Page Intermediate File</h4>
+<pre><code>&lt;&gt;  a pcdmuse:IntermediateFile .
+    pcdm:fileOf &lt;somePage&gt;
+    ebucore:hasMimeType “image/jp2”
+    … other technical metadata …
+</code></pre>
+
+<h4 id="page-service-file">Page Service File</h4>
+<pre><code>&lt;&gt;  a pcdmuse:ServiceFile .
+    pcdm:fileOf &lt;somePage&gt;
+    ebucore:hasMimeType “image/jpeg”
+    … other technical metadata …
+</code></pre>
+
+<h4 id="page-thumbnail-file">Page Thumbnail File</h4>
+<pre><code>&lt;&gt;  a pcdmuse:ThumbnailImage .
+    pcdm:fileOf &lt;somePage&gt;
+    ebucore:hasMimeType “image/png”
+    … other technical metadata …
+</code></pre>
+
+<h2 id="drupal-8_1">Drupal 8</h2>
+<p>Objects will be modeled using <a href="https://www.drupal.org/node/2143503">content entities</a> in Drupal 8. The content entities store their metadata as Drupal fields, which are mapped to RDF using an <a href="https://www.drupal.org/developing/api/rdf">rdf mapping</a>. An RDF mapping not only allows metadata to be transformed into json-ld, but it also controls which properties from Drupal get preserved in Fedora.</p>
+<p>Files will be modeled using <a href="https://www.drupal.org/project/media_entity">media entities</a>. Media entities attempt to provide the base storage component for the Drupal 8. They can model any type of media, including local files, YouTube
+videos, Tweets, Instagram photos, etc…</p>
+<p>Ingests and edits can be done for an entire graph of entities using <a href="https://www.drupal.org/project/inline_entity_form">inline entity forms</a>. Although flushing back to Fedora happens at the per-Resource level, using inline entity forms makes the <a href="https://en.wikipedia.org/wiki/Named_graph">named graph</a> the default unit of work for a repository architect.</p>
+<p>Here’s an example of what an ingest form could look like using inline entity forms:</p>
+<p><img alt="Example ingest form" src="https://raw.githubusercontent.com/Islandora-CLAW/CLAW/master/docs/assets/image06.jpg" /></p>
+<p>Here’s a list of the entities required to meet our goals. Each of these entities must have basic RESTful CRUD operations exposed for clients.</p>
+<ul>
+<li>RdfResource</li>
+<li>NonRdfResource</li>
+<li>Proxy</li>
+<li>Object</li>
+<li>File</li>
+<li>Collection</li>
+<li>Image</li>
+<li>Page</li>
+<li>Book</li>
+</ul>
+<p>Individual entities and named graphs can be imported and exported in <a href="http://json-ld.org/">json-ld format</a> using <a href="https://www.w3.org/TR/json-ld/#dfn-context">json-ld contexts</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../user-documentation/getting-started-with-islandora-claw/" title="Getting Started with Islandora CLAW" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting Started with Islandora CLAW
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../technical-documentation/docs-build/" title="How to build documenation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                How to build documenation
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://twitter.com/islandora" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

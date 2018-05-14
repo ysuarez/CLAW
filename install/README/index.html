@@ -1,0 +1,1333 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for Islandora CLAW">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>Installation (Vagrant) - Islandora CLAW</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#islandora-claw-vagrant" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../user-documentation/intro-to-claw/" title="Islandora CLAW" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Islandora CLAW
+              </span>
+              <span class="md-header-nav__topic">
+                Installation (Vagrant)
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/Islandora-CLAW/CLAW/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Islandora CLAW
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Islandora-CLAW/CLAW/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      User Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        User Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/intro-to-claw/" title="Introduction to Islandora CLAW" class="md-nav__link">
+      Introduction to Islandora CLAW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/CLAWfor1x/" title="Islandora CLAW for 1.x Users" class="md-nav__link">
+      Islandora CLAW for 1.x Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/intro-to-ld-for-claw/" title="Introduction to Linked Data for CLAW" class="md-nav__link">
+      Introduction to Linked Data for CLAW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/getting-started-with-islandora-claw/" title="Getting Started with Islandora CLAW" class="md-nav__link">
+      Getting Started with Islandora CLAW
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Technical Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Technical Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mvp/mvp_doc/" title="Minimum Viable Product" class="md-nav__link">
+      Minimum Viable Product
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../technical-documentation/docs-build/" title="How to build documenation" class="md-nav__link">
+      How to build documenation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../technical-documentation/drupal-project/" title="Syncing Drupal Project" class="md-nav__link">
+      Syncing Drupal Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../technical-documentation/versioning/" title="Versioning Policy" class="md-nav__link">
+      Versioning Policy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../alpaca/alpaca-technical-stack/" title="Alpaca Technical Stack" class="md-nav__link">
+      Alpaca Technical Stack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora/rdf-mapping/" title="RDF Mapping" class="md-nav__link">
+      RDF Mapping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora/drupal-bundle-configurations/" title="Dupal Bundle Configurations" class="md-nav__link">
+      Dupal Bundle Configurations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Components
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Islandora CLAW" class="md-nav__link">
+      Islandora CLAW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../alpaca/README/" title="Alpaca" class="md-nav__link">
+      Alpaca
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chullo/README/" title="Chullo" class="md-nav__link">
+      Chullo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../crayfish/README/" title="Crayfish" class="md-nav__link">
+      Crayfish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../crayfish-commons/README/" title="Crayfish-Commons" class="md-nav__link">
+      Crayfish-Commons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../syn/README/" title="Syn" class="md-nav__link">
+      Syn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Drupal modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        Drupal modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora/README/" title="Islandora" class="md-nav__link">
+      Islandora
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora_collection/README/" title="Islandora Collection" class="md-nav__link">
+      Islandora Collection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora_image/README/" title="Islandora Image" class="md-nav__link">
+      Islandora Image
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../jsonld/README/" title="jsonld" class="md-nav__link">
+      jsonld
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Installation (Vagrant)
+      </label>
+    
+    <a href="./" title="Installation (Vagrant)" class="md-nav__link md-nav__link--active">
+      Installation (Vagrant)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" title="Requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" title="Variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-resources" title="System Resources" class="md-nav__link">
+    System Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hostname-and-description" title="Hostname and Description" class="md-nav__link">
+    Hostname and Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use" title="Use" class="md-nav__link">
+    Use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect" title="Connect" class="md-nav__link">
+    Connect
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drupal" title="Drupal" class="md-nav__link">
+    Drupal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" title="MySQL" class="md-nav__link">
+    MySQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedora4" title="Fedora4" class="md-nav__link">
+    Fedora4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomcat-manager" title="Tomcat Manager" class="md-nav__link">
+    Tomcat Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" title="SSH" class="md-nav__link">
+    SSH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vm" title="VM" class="md-nav__link">
+    VM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cantaloupe" title="Cantaloupe" class="md-nav__link">
+    Cantaloupe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwt" title="JWT" class="md-nav__link">
+    JWT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment" title="Environment" class="md-nav__link">
+    Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-troubleshooting" title="Windows Troubleshooting" class="md-nav__link">
+    Windows Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sponsors" title="Sponsors" class="md-nav__link">
+    Sponsors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintainers" title="Maintainers" class="md-nav__link">
+    Maintainers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development" title="Development" class="md-nav__link">
+    Development
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/CONTRIBUTING/" title="How to contribute" class="md-nav__link">
+      How to contribute
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/committers/" title="Committers" class="md-nav__link">
+      Committers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/hacking-on-islandora/" title="Hacking on Islandora" class="md-nav__link">
+      Hacking on Islandora
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Migration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Migration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../migration/migration/" title="Migration" class="md-nav__link">
+      Migration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../migration/fedora-namespace-predicates/" title="Fedora namespace predicates" class="md-nav__link">
+      Fedora namespace predicates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../migration/islandora-namespace-predicates/" title="Islandora namespace predicates" class="md-nav__link">
+      Islandora namespace predicates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" title="Requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" title="Variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-resources" title="System Resources" class="md-nav__link">
+    System Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hostname-and-description" title="Hostname and Description" class="md-nav__link">
+    Hostname and Description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use" title="Use" class="md-nav__link">
+    Use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect" title="Connect" class="md-nav__link">
+    Connect
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drupal" title="Drupal" class="md-nav__link">
+    Drupal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" title="MySQL" class="md-nav__link">
+    MySQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedora4" title="Fedora4" class="md-nav__link">
+    Fedora4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomcat-manager" title="Tomcat Manager" class="md-nav__link">
+    Tomcat Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" title="SSH" class="md-nav__link">
+    SSH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vm" title="VM" class="md-nav__link">
+    VM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cantaloupe" title="Cantaloupe" class="md-nav__link">
+    Cantaloupe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwt" title="JWT" class="md-nav__link">
+    JWT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment" title="Environment" class="md-nav__link">
+    Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-troubleshooting" title="Windows Troubleshooting" class="md-nav__link">
+    Windows Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sponsors" title="Sponsors" class="md-nav__link">
+    Sponsors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintainers" title="Maintainers" class="md-nav__link">
+    Maintainers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development" title="Development" class="md-nav__link">
+    Development
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Islandora-CLAW/CLAW/edit/master/docs/install/README.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="islandora-claw-vagrant"><img alt="Islandora CLAW Vagrant" src="https://cloud.githubusercontent.com/assets/2371345/22829608/c44c500c-ef79-11e6-93f6-e2222b60fbc4.png" /> Islandora CLAW Vagrant</h1>
+<p><a href="./CONTRIBUTING.md"><img alt="Contribution Guidelines" src="http://img.shields.io/badge/CONTRIBUTING-Guidelines-blue.svg" /></a>
+<a href="../LICENSE"><img alt="LICENSE" src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" /></a></p>
+<h2 id="introduction">Introduction</h2>
+<p>The is a development environment virtual machine for Islandora CLAW. It should work on any operating system that supports VirtualBox and Vagrant.</p>
+<p>N.B. This virtual machine <strong>should not</strong> be used in production.</p>
+<h2 id="requirements">Requirements</h2>
+<ol>
+<li><a href="https://www.virtualbox.org/">VirtualBox</a></li>
+<li><a href="http://www.vagrantup.com/">Vagrant</a> 1.8.5+</li>
+<li><a href="https://git-scm.com/">git</a></li>
+</ol>
+<h2 id="variables">Variables</h2>
+<h3 id="system-resources">System Resources</h3>
+<p>By default the virtual machine that is built uses 3GB of RAM. Your host machine will need to be able to support the additional memory use. You can override the CPU and RAM allocation by creating <code>ISLANDORA_VAGRANT_CPUS</code> and <code>ISLANDORA_VAGRANT_MEMORY</code> environment variables and setting the values. For example, on an Ubuntu host you could add to <code>~/.bashrc</code>:</p>
+<pre><code class="bash">export ISLANDORA_VAGRANT_CPUS=4
+export ISLANDORA_VAGRANT_MEMORY=4096
+</code></pre>
+
+<h3 id="hostname-and-description">Hostname and Description</h3>
+<p>If you use a DNS or host file management plugin with Vagrant, you may want to set a specific hostname for the virtual machine. You can do that with the <code>ISLANDORA_VAGRANT_HOSTNAME</code> variable.  The <code>ISLANDORA_VAGRANT_VIRTUALBOXDESCRIPTION</code> variables can be used to track the VM build. For example:</p>
+<pre><code class="bash">export ISLANDORA_VAGRANT_HOSTNAME=&quot;claw&quot;
+export ISLANDORA_VAGRANT_VIRTUALBOXDESCRIPTION=&quot;Islandora CLAW&quot;
+</code></pre>
+
+<h2 id="use">Use</h2>
+<p>VirtualBox:</p>
+<ol>
+<li><code>git clone https://github.com/Islandora-CLAW/claw_vagrant</code></li>
+<li><code>cd claw_vagrant</code></li>
+<li><code>vagrant up</code></li>
+</ol>
+<h2 id="connect">Connect</h2>
+<p>You can connect to the machine via the browser at <a href="http://localhost:8000">http://localhost:8000</a>.</p>
+<h3 id="drupal">Drupal</h3>
+<p>The default Drupal login details are:</p>
+<ul>
+<li>username: admin</li>
+<li>password: islandora</li>
+</ul>
+<h3 id="mysql">MySQL</h3>
+<ul>
+<li>username: root</li>
+<li>password: islandora</li>
+</ul>
+<h3 id="fedora4">Fedora4</h3>
+<p>The Fedora 4 REST API can be accessed at <a href="http://localhost:8080/fcrepo/rest">http://localhost:8080/fcrepo/rest</a>. </p>
+<p>Authentication is done via <a href="https://github.com/Islandora-CLAW/Syn">Syn</a> using <a href="https://jwt.io">JWT</a> tokens.</p>
+<h3 id="tomcat-manager">Tomcat Manager</h3>
+<ul>
+<li>username: islandora</li>
+<li>password: islandora</li>
+</ul>
+<h3 id="ssh">SSH</h3>
+<p>You can connect to the machine via ssh:</p>
+<ul>
+<li><code>vagrant ssh</code></li>
+<li><code>ssh -p 2222 ubuntu@localhost</code></li>
+</ul>
+<h3 id="vm">VM</h3>
+<p>The default VM login details are:</p>
+<ul>
+<li>username: ubuntu</li>
+<li>password: ubuntu</li>
+</ul>
+<h3 id="cantaloupe">Cantaloupe</h3>
+<p>You can access the Canataloupe admin interface at: http://localhost:8080/cantaloupe/admin</p>
+<ul>
+<li>username: admin</li>
+<li>password: islandora</li>
+</ul>
+<p>You can access the IIIF interface at: http://localhost:8080/cantaloupe/iiif/2/</p>
+<h3 id="jwt">JWT</h3>
+<p>CLAW uses JWT for authentication across the stack. Crayfish microservices, Fedora, and Drupal all use them. 
+Crayfish and Fedora have been set up to use a master token of <code>islandora</code> to make testing easier.  To use it, just set
+the following header in HTTP requests:</p>
+<ul>
+<li><code>Authorization: Bearer islandora</code></li>
+</ul>
+<h2 id="environment">Environment</h2>
+<ul>
+<li>Ubuntu 16.04.2</li>
+<li>Drupal 8.2.7</li>
+<li>MySQL 5.7.15</li>
+<li>Apache 2.4.18</li>
+<li>Tomcat 8.0.32.0</li>
+<li>Solr 6.2.1</li>
+<li>Camel 2.18.1</li>
+<li>Fedora 4.7.2</li>
+<li>Fedora Camel Component 4.5.0</li>
+<li>BlazeGraph 2.4.1</li>
+<li>Karaf 4.0.8</li>
+<li>Alpaca 0.3.1-SNAPSHOT</li>
+<li>Islandora 8.x-1.x</li>
+<li>PHP 7.0.15</li>
+<li>Java 8 (Oracle)</li>
+<li>Cantaloupe IIIF Server v3.3</li>
+</ul>
+<h2 id="windows-troubleshooting">Windows Troubleshooting</h2>
+<p>If you receive errors involving <code>\r</code> (end of line) you have two options:</p>
+<ol>
+<li>Clone the project using <code>--single-branch</code>.</li>
+</ol>
+<p><code>git clone --single-branch git@github.com:Islandora-CLAW/claw_vagrant.git</code>
+  A benifit to this approach is that files created or edited on a Windows environment will be pushed back to your fork with appropriate <code>LF</code> endings.</p>
+<ol>
+<li>Modify your global <code>.gitconfig</code> file to disable the Windows behavior of <code>autocrlf</code> entirely.</li>
+</ol>
+<p>Edit the global <code>.gitconfig</code> file, find the line:
+  <code>autocrlf = true</code>
+  and change it to
+  <code>autocrlf = false</code>
+  Remove and clone again. This will prevent Windows git clients from automatically replacing Unix line endings LF with Windows line endings CRLF.</p>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>UPEI</li>
+<li>discoverygarden inc.</li>
+<li>LYRASIS</li>
+<li>McMaster University</li>
+<li>University of Limerick</li>
+<li>York University</li>
+<li>University of Manitoba</li>
+<li>Simon Fraser University</li>
+<li>PALS</li>
+<li>American Philosophical Society</li>
+<li>Common Media Inc.</li>
+</ul>
+<h2 id="maintainers">Maintainers</h2>
+<ul>
+<li><a href="https://github.com/ruebot">Nick Ruest</a></li>
+</ul>
+<h2 id="development">Development</h2>
+<p>If you would like to contribute, please get involved by attending our weekly <a href="https://github.com/Islandora-CLAW/CLAW/wiki">Tech Call</a>. We love to hear from you!</p>
+<p>If you would like to contribute code to the project, you need to be covered by an Islandora Foundation <a href="http://islandora.ca/sites/default/files/islandora_cla.pdf">Contributor License Agreement</a> or <a href="http://islandora.ca/sites/default/files/islandora_ccla.pdf">Corporate Contributor Licencse Agreement</a>. Please see the <a href="http://islandora.ca/resources/contributors">Contributors</a> pages on Islandora.ca for more information.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../jsonld/README/" title="jsonld" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                jsonld
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../contributing/CONTRIBUTING/" title="How to contribute" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                How to contribute
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://twitter.com/islandora" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

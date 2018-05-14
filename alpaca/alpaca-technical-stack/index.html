@@ -1,0 +1,1322 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for Islandora CLAW">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>Alpaca Technical Stack - Islandora CLAW</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#alpaca-technical-stack" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../user-documentation/intro-to-claw/" title="Islandora CLAW" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Islandora CLAW
+              </span>
+              <span class="md-header-nav__topic">
+                Alpaca Technical Stack
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/Islandora-CLAW/CLAW/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Islandora CLAW
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Islandora-CLAW/CLAW/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      User Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        User Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/intro-to-claw/" title="Introduction to Islandora CLAW" class="md-nav__link">
+      Introduction to Islandora CLAW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/CLAWfor1x/" title="Islandora CLAW for 1.x Users" class="md-nav__link">
+      Islandora CLAW for 1.x Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/intro-to-ld-for-claw/" title="Introduction to Linked Data for CLAW" class="md-nav__link">
+      Introduction to Linked Data for CLAW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-documentation/getting-started-with-islandora-claw/" title="Getting Started with Islandora CLAW" class="md-nav__link">
+      Getting Started with Islandora CLAW
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Technical Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Technical Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mvp/mvp_doc/" title="Minimum Viable Product" class="md-nav__link">
+      Minimum Viable Product
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../technical-documentation/docs-build/" title="How to build documenation" class="md-nav__link">
+      How to build documenation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../technical-documentation/drupal-project/" title="Syncing Drupal Project" class="md-nav__link">
+      Syncing Drupal Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../technical-documentation/versioning/" title="Versioning Policy" class="md-nav__link">
+      Versioning Policy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Alpaca Technical Stack
+      </label>
+    
+    <a href="./" title="Alpaca Technical Stack" class="md-nav__link md-nav__link--active">
+      Alpaca Technical Stack
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#osgi" title="OSGi" class="md-nav__link">
+    OSGi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karaf" title="Karaf" class="md-nav__link">
+    Karaf
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#karaf-bundle-hello-world" title="Karaf - Bundle - Hello World" class="md-nav__link">
+    Karaf - Bundle - Hello World
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#karaf-features-hello-world" title="Karaf - Features - Hello World" class="md-nav__link">
+    Karaf - Features - Hello World
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradle" title="Gradle" class="md-nav__link">
+    Gradle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-camel" title="Apache Camel" class="md-nav__link">
+    Apache Camel
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alpaca-apache-camel-helloworld" title="Alpaca - Apache Camel HelloWorld" class="md-nav__link">
+    Alpaca - Apache Camel HelloWorld
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-projectbundle-under-alpaca" title="Creating a project/bundle under Alpaca" class="md-nav__link">
+    Creating a project/bundle under Alpaca
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-the-bundle" title="Building the bundle" class="md-nav__link">
+    Building the bundle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-the-bundle" title="Deploying the bundle" class="md-nav__link">
+    Deploying the bundle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-activemq" title="Apache ActiveMQ" class="md-nav__link">
+    Apache ActiveMQ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-activemq" title="Installing ActiveMQ" class="md-nav__link">
+    Installing ActiveMQ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora/rdf-mapping/" title="RDF Mapping" class="md-nav__link">
+      RDF Mapping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora/drupal-bundle-configurations/" title="Dupal Bundle Configurations" class="md-nav__link">
+      Dupal Bundle Configurations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Components
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Islandora CLAW" class="md-nav__link">
+      Islandora CLAW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../README/" title="Alpaca" class="md-nav__link">
+      Alpaca
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chullo/README/" title="Chullo" class="md-nav__link">
+      Chullo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../crayfish/README/" title="Crayfish" class="md-nav__link">
+      Crayfish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../crayfish-commons/README/" title="Crayfish-Commons" class="md-nav__link">
+      Crayfish-Commons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../syn/README/" title="Syn" class="md-nav__link">
+      Syn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Drupal modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        Drupal modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora/README/" title="Islandora" class="md-nav__link">
+      Islandora
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora_collection/README/" title="Islandora Collection" class="md-nav__link">
+      Islandora Collection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../islandora_image/README/" title="Islandora Image" class="md-nav__link">
+      Islandora Image
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../jsonld/README/" title="jsonld" class="md-nav__link">
+      jsonld
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/README/" title="Installation (Vagrant)" class="md-nav__link">
+      Installation (Vagrant)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/CONTRIBUTING/" title="How to contribute" class="md-nav__link">
+      How to contribute
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/committers/" title="Committers" class="md-nav__link">
+      Committers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/hacking-on-islandora/" title="Hacking on Islandora" class="md-nav__link">
+      Hacking on Islandora
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Migration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Migration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../migration/migration/" title="Migration" class="md-nav__link">
+      Migration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../migration/fedora-namespace-predicates/" title="Fedora namespace predicates" class="md-nav__link">
+      Fedora namespace predicates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../migration/islandora-namespace-predicates/" title="Islandora namespace predicates" class="md-nav__link">
+      Islandora namespace predicates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#osgi" title="OSGi" class="md-nav__link">
+    OSGi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karaf" title="Karaf" class="md-nav__link">
+    Karaf
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#karaf-bundle-hello-world" title="Karaf - Bundle - Hello World" class="md-nav__link">
+    Karaf - Bundle - Hello World
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#karaf-features-hello-world" title="Karaf - Features - Hello World" class="md-nav__link">
+    Karaf - Features - Hello World
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradle" title="Gradle" class="md-nav__link">
+    Gradle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-camel" title="Apache Camel" class="md-nav__link">
+    Apache Camel
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alpaca-apache-camel-helloworld" title="Alpaca - Apache Camel HelloWorld" class="md-nav__link">
+    Alpaca - Apache Camel HelloWorld
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-projectbundle-under-alpaca" title="Creating a project/bundle under Alpaca" class="md-nav__link">
+    Creating a project/bundle under Alpaca
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-the-bundle" title="Building the bundle" class="md-nav__link">
+    Building the bundle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-the-bundle" title="Deploying the bundle" class="md-nav__link">
+    Deploying the bundle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-activemq" title="Apache ActiveMQ" class="md-nav__link">
+    Apache ActiveMQ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-activemq" title="Installing ActiveMQ" class="md-nav__link">
+    Installing ActiveMQ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Islandora-CLAW/CLAW/edit/master/docs/alpaca/alpaca-technical-stack.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="alpaca-technical-stack">Alpaca Technical Stack</h1>
+<p>Alpaca contains several OSGI modules or bundles. They are grouped together as features and deployed to Karaf container.</p>
+<h2 id="osgi"><a href="https://www.osgi.org/developer/architecture/">OSGi</a></h2>
+<p>OSGi is a specification to develop and deploy modular Java applications. It allows for dynamic deployment (hot deployment) and dependency management. </p>
+<p>The base unit of resources is called a bundle. Bundle is similar to a jar file, with additional information to be processed as an OSGi component. Several bundles can be grouped together into a Feature and installed together. OSGi bundles can be run on containers implementing the OSGi specification. Apache Karaf is one such container</p>
+<h2 id="karaf"><a href="https://karaf.apache.org/manual/latest/overview.html">Karaf</a></h2>
+<p>Apache Karaf is a container that can be used to deploy an array of applications such servlets, Apache Camel components, jars etc. </p>
+<h3 id="karaf-bundle-hello-world">Karaf - Bundle - Hello World</h3>
+<p>Download a bundle to the <a href="https://github.com/Islandora-CLAW/claw_vagrant">CLAW vagrant</a> (ex to <code>/home/ubuntu</code> directory). An example hello world bundle is <a href="https://github.com/moghaddam/developmentor/blob/master/helloworld/target/helloworld-1.0.0.jar">here</a>. </p>
+<p>In Islandora CLAW vagrant, you can login to Karaf using ssh. The password is karaf. You can also use the client here: <code>/opt/karaf/bin/client</code>. Karaf client allows the use of linux commands such as <code>grep</code> in addition to Karaf commands.  </p>
+<pre><code>ssh -p 8101 karaf@localhost
+</code></pre>
+
+<p>Install the bundle:</p>
+<pre><code>karaf@root()&gt; bundle
+karaf@root(bundle)&gt; install file:///home/ubuntu/helloworld-1.0.0.jar
+Bundle ID: 242
+</code></pre>
+
+<p>The installation will return a bundle id. You can issue the list command to verify that bundle is on the list. Initially it will have <em>Installed</em> status.</p>
+<p>As per OSGi specification, before a bundle can be started, it has to be Resolved. To resolve, issue the following command.  </p>
+<pre><code>karaf@root(bundle)&gt; resolve 242
+</code></pre>
+
+<p>You can start and stop the bundle as below.</p>
+<pre><code>karaf@root(bundle)&gt; start 242
+Hello World!
+karaf@root(bundle)&gt; stop 242
+Goodbye World!
+karaf@root(bundle)&gt; 
+</code></pre>
+
+<h3 id="karaf-features-hello-world">Karaf - Features - Hello World</h3>
+<p>Karaf Features allows for bundles to be grouped, managed and deployed together. Features can be nested as well. Feature files of frameworks such as Apache Camel or Apache ActiveMQ can be used to deploy those services.  </p>
+<p>A simple Features file is as below.  </p>
+<pre><code>&lt;features&gt;
+  &lt;feature name='greeter_server' version='1.0'&gt;
+    &lt;bundle&gt;file:///home/ubuntu/helloworld-1.0.0.jar&lt;/bundle&gt;
+    &lt;bundle&gt;file:///home/ubuntu/helloworld2-1.0.0.jar&lt;/bundle&gt;
+  &lt;/feature&gt;
+&lt;/features&gt;
+</code></pre>
+
+<p>You can add the features to Karaf as below:</p>
+<pre><code>karaf@root()&gt; feature:repo-add file:///home/ubuntu/features.xml
+</code></pre>
+
+<p>You can install the feature's bundles as below.  </p>
+<pre><code>karaf@root(feature)&gt; install greeter_server
+Hello World 2 !
+Hello World!
+</code></pre>
+
+<p>Uninstalling the feature.</p>
+<pre><code>karaf@root(feature)&gt; uninstall greeter_server
+Goodbye World 2 !
+Goodbye World!
+
+</code></pre>
+
+<h2 id="gradle"><a href="https://docs.gradle.org/current/userguide/tutorial_using_tasks.html">Gradle</a></h2>
+<p>Gradle is used by Alpaca as a build and package management tool. It is similar to <a href="https://maven.apache.org/">Maven</a>.  </p>
+<h2 id="apache-camel"><a href="http://camel.apache.org/book-getting-started.html">Apache Camel</a></h2>
+<p>Apache Camel is an integration framework that aids in implementing integration patterns.  </p>
+<h3 id="alpaca-apache-camel-helloworld">Alpaca - Apache Camel HelloWorld</h3>
+<p>Maven has camel-archetype-blueprint which can be used to create apache-camel OSGi bundle project structure.  </p>
+<h4 id="creating-a-projectbundle-under-alpaca">Creating a project/bundle under Alpaca</h4>
+<pre><code>mvn archetype:generate -DarchetypeGroupId=org.apache.camel.archetypes -DarchetypeArtifactId=camel-archetype-blueprint -DarchetypeVersion=2.9.0 -DarchetypeRepository=https://repository.apache.org/content/groups/snapshots-g
+</code></pre>
+
+<p>However, it is easier to copy the structure of an existing project such as <a href="https://github.com/Islandora-CLAW/Alpaca/tree/master/islandora-connector-broadcast">islandora-connector-broadcast</a>.</p>
+<pre><code>cp -R islandora-connector-broadcast/ islandora-connector-helloworld
+
+</code></pre>
+
+<p>Open the project in your IDE. In Eclipse, you can go to File | Open Projects from File System and navigate the new folder.  </p>
+<p>We need to rename the configuration, java and build files to reflect the helloworld project.  </p>
+<ul>
+<li><code>src/main/cfg/ca.islandora.alpaca.connector.helloworld.cfg</code></li>
+<li><code>src/main/java/ca/islandora/alpaca/connector/helloworld</code></li>
+<li><code>src/main/java/ca/islandora/alpaca/connector/helloworld/HelloworldRouter.java</code></li>
+</ul>
+<p>Also change the content of the above file to log Hello World</p>
+<pre><code>package ca.islandora.alpaca.connector.helloworld;
+
+import static org.apache.camel.LoggingLevel.INFO;
+
+import org.apache.camel.builder.RouteBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class HelloworldRouter extends RouteBuilder {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(HelloworldRouter.class);
+
+    /**
+     * Configure the message route workflow.
+     */
+    public void configure() throws Exception {
+
+        // Hello World.
+        from(&quot;timer:foo?period=5000&quot;).log(INFO, LOGGER, &quot;Hello World&quot;);
+    }
+}
+
+</code></pre>
+
+<ul>
+<li><code>src/main/resource/OSGI-INF/blueprint/blueprint.xml</code> - Change the content of this file to reflect Helloworld package.  </li>
+<li><code>src/build.gradle</code></li>
+</ul>
+<pre><code>apply plugin: 'osgi'
+
+description = 'Islandora CLAW HelloWorld'
+
+dependencies {
+    compile group: 'org.apache.camel', name: 'camel-core', version: camelVersion
+    compile group: 'org.apache.camel', name: 'camel-blueprint', version: camelVersion
+    compile group: 'org.apache.activemq', name: 'activemq-camel', version: activemqVersion
+    compile group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
+    testCompile group: 'org.apache.camel', name: 'camel-test-blueprint', version: camelVersion
+}
+
+jar {
+    manifest {
+        description project.description
+        docURL project.docURL
+        vendor project.vendor
+        license project.license
+
+        instruction 'Import-Package', 'org.apache.activemq.camel.component,' +
+                            &quot;org.apache.camel;version=\&quot;${camelVersionRange}\&quot;,&quot; +
+                            defaultOsgiImports
+        instruction 'Export-Package', 'ca.islandora.alpaca.connector.helloworld'
+    }
+}
+
+artifacts {
+    archives (file('build/cfg/main/ca.islandora.alpaca.connector.helloworld.cfg')) {
+        classifier 'configuration'
+        type 'cfg'
+    }
+}
+</code></pre>
+
+<h4 id="building-the-bundle">Building the bundle</h4>
+<p>To build this project, we have to update the Alpaca build settings. Include and add the project in <code>Alpaca/settings.gradle</code>.</p>
+<pre><code>include ':islandora-connector-helloworld'
+project(':islandora-connector-helloworld').projectDir = &quot;$rootDir/islandora-connector-helloworld&quot; as File
+</code></pre>
+
+<p>Normally, we would also have to update the <code>karaf/src/main/resources/features.xml</code> file to include this bundle. However, we will be deploying the bundle directly into Karaf's Hot deployment directory. Thus, not needed at this time.</p>
+<p>To build it from command line in Linux.</p>
+<pre><code>ubuntu:~/workspace/Alpaca$ sudo gradle w build
+</code></pre>
+
+<h4 id="deploying-the-bundle">Deploying the bundle</h4>
+<ul>
+<li>Upload the bundle to the Apache Karaf deploy directory: <code>/opt/apache-karaf-4.0.5/deploy</code></li>
+<li>Login to Karaf. You can also use the Karaf client here: <code>/opt/karaf/bin/client</code>.</li>
+</ul>
+<pre><code>ssh -p 8101 karaf@localhost
+</code></pre>
+
+<ul>
+<li>Verify that bundle is deployed</li>
+</ul>
+<pre><code>bundle:list
+</code></pre>
+
+<ul>
+<li>See the log to confirm that the bundle is working.</li>
+</ul>
+<pre><code>log:tail
+</code></pre>
+
+<p>You should see a message like below:</p>
+<pre><code>2017-02-24 21:30:17,973 | INFO  | 12 - timer://foo | HelloworldRouter                 | 186 - ca.islandora.alpaca.islandora-connector-helloworld - 0.2.1.SNAPSHOT | Hello World
+</code></pre>
+
+<h2 id="apache-activemq"><a href="http://activemq.apache.org/getting-started.html">Apache ActiveMQ</a></h2>
+<p>Apache ActiveMQ is a JMS compliant Messaging Queue. Messaging client can make use of JMS to send messages.</p>
+<h3 id="installing-activemq">Installing ActiveMQ</h3>
+<p>Installing ActiveMQ is relatively easy. Download the latest stable release <a href="http://activemq.apache.org/download.html">here</a>. Go to the <code>activemq_install_dir/bin</code>. Start the ActiveMQ by using the activemq script or batch file and start command.</p>
+<pre><code>$ cd activemq_install_dir/bin
+$ ./activemq start
+</code></pre>
+
+<p>When ActiveMQ gets started, go to http://localhost:8161/admin/. You can login using admin:admin.</p>
+<p>Note that ActiveMQ in CLAW vagrant does not have a UI.  </p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://www.theserverside.com/news/1363825/OSGi-for-Beginners">OSGI for Beginners</a></li>
+<li><a href="http://www.javaindeed.com/playing-with-apache-karaf-console/">Playing with Apache Karaf Console</a></li>
+<li><a href="https://karaf.apache.org/manual/latest/quick-start.html">Karaf Quick Start</a></li>
+<li><a href="http://tech.lalitbhatt.net/2014/08/activemq-introduction.html">ActiveMQ Introduction</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../technical-documentation/versioning/" title="Versioning Policy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Versioning Policy
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../islandora/rdf-mapping/" title="RDF Mapping" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                RDF Mapping
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://twitter.com/islandora" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
